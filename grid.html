@@ -1,0 +1,53 @@
+<!-- https://studiomeal.com/archives/533 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(2, 5fr);
+            /* grid-template-columns: repeat(10, 2fr);
+            repeat 안 쓰면 픽셀 넣거나 뭐 이것저것 다 섞어서 가능함요
+            repeat는 똑같은 반복해줌 2fr개씩 10개로 한다는 겨 fr 값 여러 개 넣어도 됨*/
+            /* grid-template-columns: repeat(10,minmax(100px, auto)); */
+            /* 10개로 분할하는데 최소위드는 100px, 하이트는 오토로 늘어나게 해주생 */
+            
+            /* grid-template-columns: repeat(auto-fill ,minmax(11.11%, auto)); */
+            /* 민맥스에서 설정한 너비가 가능한만큼 자동으로 셀을 채운다 만약 갯수가 모자라다면 공간이 그냥 남는다*/
+            /* grid-template-columns: repeat(auto-fit ,minmax(5%, auto)); */
+            /* 오토핏은 남는 공간을 채운다*/
+
+            row-gap: 30px;
+            /* 상하 */
+            column-gap: 50px;
+            /* 좌우 */
+            /* gap으로 한 번에 써도 됩니다 */
+
+            /* grid-auto-rows: minmax(100px, auto); < 이거 쓰면 위에 리피트로 개수 지정 안 해줘도 알아서 저 범위만큼 늘어나여 */
+        }
+        .item{
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 그리드 컨테이너 -->
+        <div class="item">a</div>
+        <div class="item">b</div>
+        <div class="item">c</div>
+        <div class="item">d</div>
+        <div class="item">e</div>
+        <div class="item">f</div>
+        <div class="item">g</div>
+        <div class="item">h</div>
+        <div class="item">i</div>
+        <!-- 그리드 아이템 -->
+    </div>
+</body>
+</html>
