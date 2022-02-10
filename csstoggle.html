@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <style>
+      body {
+        width: 390px;
+        height: 100%;
+        display: flex;
+        background-color: #ccc;
+      }
+      img {
+        width: 80px;
+        height: 80px;
+      }
+      input {
+        width: 80px;
+        height: 80px;
+        display: none;
+      }
+      input[type="checkbox"]:checked ~ label {
+        background-color: aqua;
+        width: 80px;
+        height: 80px;
+        border: 1px black solid;
+      }
+      input#a + label {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+      input#a + label span:nth-child(1) {
+        width: 30px;
+        height: 30px;
+        background-image: url(./cj_one.png);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      input#a:checked + label span:nth-child(1) {
+        transform: scale(1.2);
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input id="a" type="checkbox" />
+      <label for="a"><span></span><span></span></label>
+      <button>다시하기</button>
+      <button>정답확인하기</button>
+    </form>
+  </body>
+</html>
