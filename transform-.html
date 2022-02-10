@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .f{
+            width: 500px;
+            height: 500px;
+            background-color: blanchedalmond;
+            transform-origin: 80% 80%;
+            /* tf의 모든 기준점 기본값은 50 50 가운데다 x,y,z */
+            /* transform: rotate(45deg); */
+            perspective-origin: 0 200px;
+            perspective: 200px;
+            /* 원근법 부모 오브젝트에 줘야 먹힌다 숫자가 적을 수록 멀다 */
+            /* transform-style: preserve-3d; */
+        }
+        .p{
+            width: 200px;
+            height: 300px;
+            background-color: aquamarine;
+            transform: rotateX(45deg) rotateY(31deg) rotate3d(1,1,1, 10deg);
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+            /* 뒷면 숨기기 */
+        }
+        .c{
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            transform: rotate(45deg) rotate3d(1,5,1, 10deg);
+        }
+        /* transform-style: preserve-3d
+        3d변환을 사용한 요소의 자식에도 3d를 줄 것이닞 묻는다 기본값은 flat으로 사용하지 않음임 */
+        /* transform: perspective ()
+            은 적용할 대상 하나에만 적용됨*/
+    </style>
+</head>
+<body>
+    <div class="f">
+        <div class="p">
+            <div class="c"></div>
+        </div>
+    </div>
+</body>
+</html>
